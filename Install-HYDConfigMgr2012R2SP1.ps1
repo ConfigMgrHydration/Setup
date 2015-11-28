@@ -18,15 +18,8 @@ Author - Johan Arwidmark
 #>
 
 # Validation
-Write-Output "Checking for setup files"
-If (Test-Path E:\Setup\ConfigMgr2012R2SP1\SMSSETUP\BIN\X64\Configmgr2012R2SP1.msi){
-    Write-Output "Setup files found, OK, continuing..."
-    Write-Output ""
-    } 
-Else {
-    Write-Warning "Oupps, cannot setup files, aborting..."
-    Break
-}
+if (!(Test-Path -path C:\Setup\CM2012R2SP1\SMSSETUP\BIN\X64\Configmgr2012R2SP1.msi)) {Write-Warning "Could not find ConfigMgr 2012 R2 SP1 setup file, aborting...";Break}
+if (!(Test-Path -path E:\)) {Write-Warning "Could not find Program Files Volume, aborting...";Break}
 
 # Install ConfigMgr 2012 R2 SP1
-msiexec /i E:\Setup\ConfigMgr2012R2SP1\SMSSETUP\BIN\X64\Configmgr2012R2SP1.msi /q 
+msiexec /i C:\Setup\ConfigMgr2012R2SP1\SMSSETUP\BIN\X64\Configmgr2012R2SP1.msi /q 
