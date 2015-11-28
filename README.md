@@ -1,2 +1,6 @@
-This is a repository of PowerShell scripts that help you setup and configure a ConfigMgr platform. The scripts are developed and maintained by Johan Arwidmark, Johnny Radeck and Henrik Antin.
+This is a repository of PowerShell scripts that help you setup and configure a ConfigMgr 2012 R2 SP1 platform. 
+
+These scripts are developed and maintained by Johan Arwidmark (@jarwidmark), Henrik Antin (@HenEri) and Johnny Radeck (@Johnny_Radeck).
+
+Please review the "ConfigMgr Hydration Setup Guide.pdf" document for detailed step-by-step instructions.
 
