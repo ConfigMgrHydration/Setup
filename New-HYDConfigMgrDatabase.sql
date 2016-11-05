@@ -36,9 +36,9 @@ DECLARE  @CMSiteCode  nchar(3) = N'PS1' -- This is the Site Code you are going t
                            Example of specifying a size: N'123456MB' (can use KB, MB, or GB).
                            The default is to grow the data files by 1 GB.
 ************************************************************************************************************************/
-DECLARE  @NumTotalDataFiles   tinyint = 4
+DECLARE  @NumTotalDataFiles   tinyint = 1
         ,@SecondDataDrive     nchar(1) = N''
-        ,@InitialDataFileSize nvarchar(50) = N'10240MB'
+        ,@InitialDataFileSize nvarchar(50) = N'40960MB'
         ,@InitialLogFileSize  nvarchar(50) = N'1024MB'
         ,@PriDataFileGrowth   nvarchar(50) = N'1024MB'
         ,@LogFileGrowth       nvarchar(50) = N'1024MB';
