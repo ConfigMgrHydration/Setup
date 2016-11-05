@@ -18,7 +18,7 @@ Author - Johan Arwidmark
 #>
 
 # Validation
-if (!(Test-Path -path C:\Setup\WindowsADK10\adksetup.exe)) {Write-Warning "Could not find Windows 10 ADK Setup files, aborting...";Break}
+if (!(Test-Path -path C:\Setup\WindowsADK10\adksetup.exe)) {Write-Warning "Could not find Windows 10 ADK v1607 Setup files, aborting...";Break}
 
 # Install Windows ADK 10
 & 'C:\Setup\WindowsADK10\adksetup.exe' /Features OptionId.DeploymentTools OptionId.WindowsPreinstallationEnvironment OptionId.UserStateMigrationTool /norestart /quiet /ceip off

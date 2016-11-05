@@ -1,4 +1,4 @@
-This is a repository of PowerShell scripts that help you setup and configure a ConfigMgr 2012 R2 SP1 platform. 
+This is a repository of PowerShell scripts that help you setup and configure a ConfigMgr Current Branch platform. 
 
 These scripts are developed and maintained by Johan Arwidmark (@jarwidmark), Henrik Antin (@HenEri) and Johnny Radeck (@Johnny_Radeck).
 

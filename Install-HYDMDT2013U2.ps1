@@ -19,7 +19,7 @@ Author - Johan Arwidmark
 
 # Validation
 Write-Output "Checking for setup files"
-If (Test-Path C:\Setup\MDT2013U1\MicrosoftDeploymentToolkit2013_x64.msi){
+If (Test-Path C:\Setup\MDT2013U2\MicrosoftDeploymentToolkit2013_x64.msi){
     Write-Output "Setup files found, OK, continuing..."
     Write-Output ""
     } 
@@ -29,4 +29,4 @@ Else {
 }
 
 # Install MDT 2013
-& msiexec.exe /i 'C:\Setup\MDT2013\MicrosoftDeploymentToolkit2013_x64.msi' /quiet
+& msiexec.exe /i 'C:\Setup\MDT2013U2\MicrosoftDeploymentToolkit2013_x64.msi' /quiet
