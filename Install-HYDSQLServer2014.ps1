@@ -17,12 +17,15 @@ Author - Johan Arwidmark
 
 #>
 
+$SQLSetupFile = "C:\Setup\SQL Server 2014 Standard with SP1 x64\Setup.exe"
+$SQLConfigurationFile = "C:\Setup\Scripts\HYDSQL2014Unattend.ini"
+
 # Validation
-if (!(Test-Path -path C:\Setup\SQL2014\setup.exe)) {Write-Warning "Could not find SQL Server 2014 setup files, aborting...";Break}
-if (!(Test-Path -path C:\Setup\Scripts\HYDSQL2014Unattend.ini)) {Write-Warning "Could not find SQL Server 2014 Unattend file, aborting...";Break}
+if (!(Test-Path -path $SQLSetupFile)) {Write-Warning "Could not find SQL Server 2014 setup files, aborting...";Break}
+if (!(Test-Path -path $SQLConfigurationFile)) {Write-Warning "Could not find SQL Server 2014 Unattend file, aborting...";Break}
 if (!(Test-Path -path G:\)) {Write-Warning "Could not find SQL TempDB Volume, aborting...";Break}
 if (!(Test-Path -path H:\)) {Write-Warning "Could not find SQL DB Volume, aborting...";Break}
 if (!(Test-Path -path I:\)) {Write-Warning "Could not find SQL Logs Volume, aborting...";Break}
 
 # Install SQL
-& C:\Setup\SQL2014\setup.exe /configurationfile=C:\Setup\Scripts\HYDSQL2014Unattend.ini
+& $SQLSetupFile /configurationfile=$SQLConfigurationFile
