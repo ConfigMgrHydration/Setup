@@ -18,7 +18,7 @@ Author - Johan Arwidmark
 #>
 
 Import-Module $env:SMS_ADMIN_UI_PATH.Replace("\bin\i386","\bin\configurationmanager.psd1")
-Push-Location "$($(Get-PSDrive -PSProvider CMSITE).Name):"
+Push-Location "$($(Get-PSDrive -PSProvider CMSITE).Name):\"
 
 # Create Folders in Device Collections
 New-Item -Name 'Limiting Collections' -Path '\DeviceCollection'
